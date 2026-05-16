@@ -1,0 +1,36 @@
+show databases;
+create database vitcampus;
+create database vitcampus1;
+drop database vitcampus1;
+
+use vitcampus;
+create table CSE(
+    sid int,
+    sname varchar(50),
+    smarks int
+);
+
+create table EEE(
+    sid int,
+    sname varchar(50),
+    smarks int
+);
+create table MEE(
+    sid int,
+    sname varchar(50),
+    smarks int
+);
+show tables from vitcampus;
+
+insert into CSE values ( 109 , 'kiran' , 99);
+insert into CSE values ( 110 , 'riran' , 95);
+insert into CSE values ( 111 , 'viran' , 94);
+select * from CSE;
+insert into EEE values ( 109 , 'kiran' , 95);
+insert into EEE values ( 110 , 'riran' , 98);
+insert into EEE values ( 111 , 'viran' , 99);
+select * from EEE;
+insert into MEE values ( 109 , 'kiran' , 91);
+insert into MEE values ( 110 , 'riran' , 94);
+insert into MEE values ( 111 , 'viran' , 92);
+select * from MEE;
