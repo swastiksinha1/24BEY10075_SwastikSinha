@@ -1,0 +1,41 @@
+Select * from worker;
+Select First_Name,Department,Salary from worker
+where department = "admin" order by salary desc;  
+
+#GROUP BY
+select count (worker_id) from worker where department = 'admin' or department =
+select department, count(department) from worker
+group by department order by department asc;
+
+select department, sum(salary) from worker group by department;
+
+select department,count(department) from worker
+where count(department
+group by department having  count (department) >=3 order by department asc;
+
+SELECT department, SUM(salary) from worker GROUP BY department HAVING sum(department) < 300000 ;
+select * from worker limit 4 offset 3;
+
+create table toppers(id int);
+insert into toppers values 
+select first_name, department from worker
+where worker id in (select id from toppers);
+
+SELECT department, SUM(salary)
+FROM worker
+GROUP BY department
+ORDER BY SUM(salary) ASC
+LIMIT 2;
+
+select first_name, department, salary from worker
+where department = 'admin' order by salary desc limit 1 offset 1;
+
+select first_name, department, salary
+from worker w1
+where salary = (
+    select distinct salary
+    from worker w2
+    where w1.department = w2.department
+    order by salary desc
+    limit 1 offset 1
+);
