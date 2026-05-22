@@ -1,0 +1,34 @@
+use vitcampus;
+
+create table departments(
+ did int primary key,
+ dname varchar(25) not null unique
+);
+
+insert into departments values
+(101, 'CSE'),(102,'ECE'),(103,'CIVIL'),(106,'AERO'),
+(107, 'MECHANICAL');
+
+SELECT * from departments order by did;
+
+create table HOD
+(Hid int primary key,
+hname varchar(20) not null unique);
+
+insert into HOD values
+(101, 'Arun'),(102,'Jayanth'),(103,'Karthik'),(106,'Murali');
+
+select * from HOD;
+
+SELECT * FROM DEPARTMENTS cross join HOD order by did asc;
+
+select * from departments inner join
+hod on departments.did = hod.hid;
+
+select * from departments NATURAL JOIN hod;
+
+select * from departments LEFT OUTER JOIN
+hod ON (departments.did = hod.hid) order by did asc;
+
+select * from departments FULL JOIN
+hod ON (departments.did = hod.hid);
