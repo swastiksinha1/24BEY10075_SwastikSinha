@@ -1,0 +1,51 @@
+use admin
+switched to db admin
+db
+admin
+db.createCollection("Student")
+{ ok: 1 }
+show collections
+Student
+system.version
+db.Student.drop()
+true
+show collections
+system.version
+db.createCollection("Employee")
+{ ok: 1 }
+admin
+
+use admin
+switched to db admin
+db.createCollection("Employee")
+{ ok: 1 }
+db.Employee.insert({name:'Jayanth',department: 'ECE'})
+DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a1458f13ecaa227bd705e50')
+  }
+}
+db.Employee.insert({name:"Tamil",mark:99,location:'chennai'})
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6a1459313ecaa227bd705e51')
+  }
+}
+db.Employee.find()
+{
+  _id: ObjectId('6a1458f13ecaa227bd705e50'),
+  name: 'Jayanth',
+  department: 'ECE'
+}
+{
+  _id: ObjectId('6a1459313ecaa227bd705e51'),
+  name: 'Tamil',
+  mark: 99,
+  location: 'chennai'
+}
+admin
+
+
