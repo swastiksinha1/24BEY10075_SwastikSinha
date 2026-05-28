@@ -1,2 +1,2 @@
 Daily progress as we go through the MongoDb course .
-currently SQL 
+currently MongoDB
